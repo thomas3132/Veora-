@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viora | Ultimate AI Platform</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ffe7;
+    }
+    header p {
+      margin-top: 0.5rem;
+      color: #aaa;
+    }
+    nav {
+      background-color: #121212;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: #00ffe7;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff4081;
+    }
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ffe7;
+    }
+    section p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1a1a1a;
+      color: #777;
+    }
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInDown {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Viora</h1>
+    <p>The Ultimate All-in-One AI Platform</p>
+  </header>
+  <nav>
+    <a href="#image-gen">Image Gen</a>
+    <a href="#video-gen">Video Gen</a>
+    <a href="#face-swap">Face Swap</a>
+    <a href="#voice-studio">Voice AI</a>
+    <a href="#site-builder">Site Builder</a>
+    <a href="#social-tools">Social Tools</a>
+    <a href="#persona">AI Personas</a>
+    <a href="#api">API Access</a>
+    <a href="#upload">Model Upload</a>
+    <a href="#dashboard">User Dashboard</a>
+  </nav>
+
+  <section id="image-gen">
+    <h2>Image Generator</h2>
+    <p>Create ultra-realistic, fully custom images using our most advanced AI visual model.</p>
+  </section>
+
+  <section id="video-gen">
+    <h2>Video Generator</h2>
+    <p>Generate cinematic videos, music visuals, or short films with pure text prompts.</p>
+  </section>
+
+  <section id="face-swap">
+    <h2>Face Swap</h2>
+    <p>Swap faces with AI precision — fast, accurate, and photorealistic.</p>
+  </section>
+
+  <section id="voice-studio">
+    <h2>AI Voice Studio</h2>
+    <p>Create, clone, and modify voices for singing, narration, or characters.</p>
+  </section>
+
+  <section id="site-builder">
+    <h2>Website Builder</h2>
+    <p>Build and design your own AI-powered websites — your way.</p>
+  </section>
+
+  <section id="social-tools">
+    <h2>Social / Dating Tools</h2>
+    <p>Powerful AI tools for creating, managing, and customizing social spaces and profiles.</p>
+  </section>
+
+  <section id="persona">
+    <h2>AI Persona Creator</h2>
+    <p>Build your own virtual characters or influencers powered by emotion-aware AI.</p>
+  </section>
+
+  <section id="api">
+    <h2>API Access</h2>
+    <p>Connect your tools, apps, or platforms directly with Viora's AI models and engines.</p>
+  </section>
+
+  <section id="upload">
+    <h2>Custom Model Uploader</h2>
+    <p>Upload and train your own models — image, voice, or video — directly into the Viora engine.</p>
+  </section>
+
+  <section id="dashboard">
+    <h2>User Dashboard</h2>
+    <p>Manage your settings, models, projects, and creations in one place.</p>
+  </section>
+
+  <footer>
+    <p>Viora © 2025 | Created by Thomas Wachter</p>
+  </footer>
+
+  <script>
+    // Trigger section animations on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
